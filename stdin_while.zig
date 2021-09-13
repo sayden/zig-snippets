@@ -2,6 +2,8 @@ const std = @import("std");
 
 const MyEnum = enum {
     @".exit",
+    @".help",
+    @".unrecognized",
 };
 
 pub fn main() !void {
@@ -9,20 +11,28 @@ pub fn main() !void {
 
     std.debug.print("Enter your name\n", .{});
 
-    var buffer: [8]u8 = undefined;
+    var buffer: [100]u8 = undefined;
     var reader = stdin.reader();
 
     while (true) {
         var line = try reader.readUntilDelimiterOrEof(&buffer, '\n');
 
-        const e = std.meta.stringToEnum(line.?);
+        const conv: MyEnum = std.meta.stringToEnum(MyEnum, line.?) orelse MyEnum.@".unrecognized";
 
-        if (e == ".exit") {
-            std.debug.print("Bye!\n", .{});
-            return;
-        } else {
-            std.debug.print("Unrecognized command. {s}", .{line});
+        switch(conv){
+            MyEnum.@".exit" =>  {
+                std.debug.print("Bye!\n", .{});
+                return;
+            },
+            MyEnum.@".help" => {
+                std.debug.print("Possible commands are:!\n.exit => exits the REPL\n.help => Show this help\n", .{});
+            },
+            MyEnum.@".unrecognized" => {
+                std.debug.print("Unrecognized command '{s}'\n", .{line.?});
+            },
         }
+
+        
     }
 
     unreachable;
