@@ -1,0 +1,15 @@
+const std = @import("std");
+const expect = std.testing.expect;
+
+pub fn main() !void {
+    const msg = "405323";
+
+    // Parse a unsigned 4 byte int number from a string
+    var res = try std.fmt.parseUnsigned(u32, msg, 10);
+    try expect(res == 405323);
+
+    // Parse an unsigned int number from a 4 byte array
+    var bytes = std.mem.toBytes(res);
+    var n = std.mem.readVarInt(u32, bytes[0..], std.builtin.Endian.Little);
+    try expect(n == 405323);
+}
