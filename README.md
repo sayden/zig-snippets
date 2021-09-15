@@ -33,6 +33,12 @@
 ## Async
 * [async.zig](async.zig) A clone of [tcp_ping_pong.zig](tcp_ping_pong.zig) with async/await
 
+## Pointers
+* [pointer_arithmetic.zig](pointer_arithmetic.zig)
+
+## Parsing
+* [parsing.zig](parsing.zig) Examples of parsing number in text `"1234"` into int `1234` and bytes arrays into known numbers.
+
 ## Misc
 * [example.txt](example.txt) To use in the [file_read.zig](file_read.zig) snippet
 * [slow_server.go](slow_server.go) A TCP ping-pong server in Go that takes 2 seconds to respond (to play in [async.zig](async.zig) and test the [Network](#network) snippets)
