@@ -31,13 +31,16 @@
 * [tcp_ping_pong.zig](tcp_ping_pong.zig) TCP server that sends a message and listens for an incoming response.
 
 ## Async
-* [async.zig](async.zig) A clone of [tcp_ping_pong.zig](tcp_ping_pong.zig) with async/await
+* [async_await.zig](async_await.zig) A clone of [tcp_ping_pong.zig](tcp_ping_pong.zig) with async/await
 
 ## Pointers
 * [pointer_arithmetic.zig](pointer_arithmetic.zig)
 
 ## Parsing
 * [parsing.zig](parsing.zig) Examples of parsing number in text `"1234"` into int `1234` and bytes arrays into known numbers.
+
+## Data structures
+* [hash_table.zig](hash_table.zig)
 
 ## Misc
 * [example.txt](example.txt) To use in the [file_read.zig](file_read.zig) snippet
