@@ -12,8 +12,9 @@ fn AddTwo(comptime T: type) type {
 }
 
 
-pub fn main() void {
+pub fn main() !void {
     const n = AddTwo(u32){ .n = 2 };
     const res = n.result();
+    try std.testing.expect(res == 4);
     std.debug.print("R: {d}\n",.{res});
 }

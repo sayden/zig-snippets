@@ -35,6 +35,7 @@
 
 ## Pointers
 * [pointer_arithmetic.zig](pointer_arithmetic.zig)
+* [dangling_pointer.zig](dangling_pointer.zig)
 
 ## Parsing
 * [parsing.zig](parsing.zig) Examples of parsing number in text `"1234"` into int `1234` and bytes arrays into known numbers.
