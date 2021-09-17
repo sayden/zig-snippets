@@ -3,12 +3,21 @@ const std = @import("std");
 pub fn main() !void {
     var p = pointer();
 
-    // here it works
+    // here it works, which is a bit unexpected
     std.debug.print("{s}\n", .{p.msg});
 
-    // but here it won't as expected, I don't understand well 
-    // why it works in the previous case.
+    // (core dump) but here it won't as expected, I don't 
+    // understand well why it works in the previous case.
     printMsg(p);
+
+    var p2 = constPointer();
+
+    // here it works too
+    std.debug.print("{s}\n", .{p2.msg});
+
+    // (core dump) but here it won't either
+    printMsg(p);
+
 }
 
 const MyStruct = struct {
@@ -22,6 +31,14 @@ fn pointer() *MyStruct {
     return &m;
 }
 
-fn printMsg(p: *MyStruct) void {
+fn constPointer()*const MyStruct{
+    const m = MyStruct{
+        .msg = "world",
+    };
+
+    return &m;
+}
+
+fn printMsg(p: *const MyStruct) void {
     std.debug.print("{s}\n", .{p.msg});
 }
