@@ -41,6 +41,7 @@
 
 ## Data structures
 * [hash_table.zig](hash_table.zig)
+* [iterator.zig](iterator.zig)
 
 ## Misc
 * [example.txt](example.txt) To use in the [file_read.zig](file_read.zig) snippet
