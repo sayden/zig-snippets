@@ -31,7 +31,8 @@
 * [tcp_ping_pong.zig](tcp_ping_pong.zig) TCP server that sends a message and listens for an incoming response.
 
 ## Async
-* [async_await.zig](async_await.zig) A clone of [tcp_ping_pong.zig](tcp_ping_pong.zig) with async/await
+* [async_await_simple.zig](async_await_simple.zig) A simple async/await example with sleeps without external pieces like the example below.
+* [async_await.zig](async_await.zig) A clone of [tcp_ping_pong.zig](tcp_ping_pong.zig) with async/await.
 
 ## Pointers
 * [pointer_arithmetic.zig](pointer_arithmetic.zig)
