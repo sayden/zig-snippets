@@ -13,11 +13,11 @@
 * [file_write.zig](file_write.zig)
 
 ## Allocators
-* [allocators_arena_with_fixed_buffer.zig](allocators_arena_with_fixed_buffer.zig)
-* [allocators_arena.zig](allocators_arena.zig)
-* [allocators_fixed_buffer.zig](allocators_fixed_buffer.zig)
 * [allocators_general_purpose.zig](allocators_general_purpose.zig)
-* [allocators_page.zig](allocators_page.zig)
+* [allocators_page.zig](allocators_page.zig) According to some video, this and the one above are probaly the easiest but the slower to use.
+* [allocators_fixed_buffer.zig](allocators_fixed_buffer.zig) Don't know why yet but I cannot make a "big" allocation with this one. I think I saw a video that explained this limitation.
+* [allocators_arena.zig](allocators_arena.zig)
+* [allocators_arena_with_fixed_buffer.zig](allocators_arena_with_fixed_buffer.zig)
 
 ## Generics
 * [generic_structs.zig](generic_structs.zig)
