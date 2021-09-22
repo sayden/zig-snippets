@@ -1,8 +1,8 @@
 //! This snippet was painful for my lack of knowledge about memory allocation.
-//! It ended up being a VERY nice exercise once everything clicked in my head.
-//! The main pain point was the Cell allocation. I got many mistakes like
+//! It ended up being a VERY NICE EXERCISE once everything *clicked* in my head.
+//! The main pain point was the `Cell` allocation. I got many mistakes like
 //! overriding the allocated pointer with a local pointer, for example.
-//! The "turning point" was the Cell(T).initAlloc function and its structure.
+//! The "turning point" was the `Cell(T).initAlloc` function and its structure.
 //! 
 //! At first I was using the Arena allocator, which is OK for a small example.
 //!  Yes, it handles the free of all memory allocations at once but if I 

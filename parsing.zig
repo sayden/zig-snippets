@@ -8,8 +8,10 @@ pub fn main() !void {
     var res = try std.fmt.parseUnsigned(u32, msg, 10);
     try expect(res == 405323);
 
-    // Parse an unsigned int number from a 4 byte array
+    // Serialize a number into a bytes array
     var bytes = std.mem.toBytes(res);
-    var n = std.mem.readVarInt(u32, bytes[0..], std.builtin.Endian.Little);
+    
+    // Parse a 4 byte array to a unsigned int number from
+    var n = std.mem.bytesToValue(u32, &bytes);
     try expect(n == 405323);
 }
