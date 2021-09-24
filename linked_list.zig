@@ -149,7 +149,8 @@ fn Iterator(comptime T: type) type {
 
 pub fn main() !void {
     // With some trial and error I discovered that for this toy example
-    // with 4 items I needed exactly 102 bytes of heap allocation
+    // with 4 items I needed exactly 102 bytes of ~~heap~~ stack allocation.
+    // (`buffer` is created on the stack)
     var buffer:[102]u8 = undefined;
     var fba = std.heap.FixedBufferAllocator.init(&buffer);
 

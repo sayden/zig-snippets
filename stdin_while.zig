@@ -8,6 +8,7 @@ const MyEnum = enum {
 
 pub fn main() !void {
     const stdin = std.io.getStdIn();
+    defer stdin.close();
 
     std.debug.print("Enter your name\n", .{});
 
