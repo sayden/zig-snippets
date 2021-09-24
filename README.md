@@ -22,6 +22,7 @@
 ## Generics
 * [generic_structs.zig](generic_structs.zig)
 * [generic_sum.zig](generic_sum.zig)
+* [traits.zig](traits.zig) An exercise examining the use of io.Writer and the kind of structural typing to can do to have "traits".
 
 ## JSON
 * [json_parse.zig](json_parse.zig)
