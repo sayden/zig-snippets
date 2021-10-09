@@ -18,6 +18,7 @@
 * [Fixed Buffer:](allocators_fixed_buffer.zig) Don't know why yet but I cannot make a "big" allocation with this one. I think I saw a video that explained this limitation.
 * [Arena](allocators_arena.zig)
 * [Arena with fixed buffer](allocators_arena_with_fixed_buffer.zig)
+* [Allocators and Syscalls](allocators_syscall.zig) An example of the syscalls made to the underlying OS Linux to request memory with the output of `strace`
 
 ## Generics
 * [Generic Struct](generic_structs.zig)
