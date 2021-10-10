@@ -15,7 +15,8 @@
 ## Allocators
 * [General purpose](allocators_general_purpose.zig)
 * [Page allocator:](allocators_page.zig) According to some video, this and the one above are probaly the easiest but the slower to use.
-* [Fixed Buffer:](allocators_fixed_buffer.zig) Don't know why yet but I cannot make a "big" allocation with this one. I think I saw a video that explained this limitation.
+* [Fixed Buffer:](allocators_fixed_buffer.zig) ~~Don't know why yet but I cannot make a "big" allocation with this one.~~ I could not make a big allocation with 
+the fixed buffer because I was passing a buffer array created on the stack, not on the heap. See [this](https://zigforum.org/t/best-allocator-for-fixed-size-heap-allocation/789/3?u=sayden) conversation.
 * [Arena](allocators_arena.zig)
 * [Arena with fixed buffer](allocators_arena_with_fixed_buffer.zig)
 * [Allocators and Syscalls](allocators_syscall.zig) An example of the syscalls made to the underlying OS Linux to request memory with the output of `strace`
