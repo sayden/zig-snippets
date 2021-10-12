@@ -5,6 +5,7 @@
 
 ## Arrays and Slices
 * [Tokenizer:](parsing_tokenizer.zig) An exercise that started about something simple but it ended up teaching me a lot about array and pointer sizes and optionals.
+* [String Literals:](string_literals.zig) I wanted to understand better how string literals work and some interesting things about slices and arrays.
 
 ## Reading, writing files and/or console:
 * [Read from StdIn:](stdin_read.zig)
