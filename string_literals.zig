@@ -61,4 +61,10 @@ pub fn main() !void {
     // Like this. My slice has size 10 but only the first byte has valid values. One way to solve this is to pass a "slice of the slice" like mem[0..1] which
     // effectively says "this slice actually starts in 0 and has length 1" which can be coerced to []u8. At the end, it's some kind of type restriction to 
     // disallow the use of `len` in some parts of the code.
+
+    var unknown_size: [*]u8 = mem.ptr;
+    _ = unknown_size;
+
+    // BTW I can get an unknown size slice using slice.ptr
+    print("Type of unknown_size           {s}             Size:  {d}\n", .{ @TypeOf(unknown_size), @sizeOf(@TypeOf(unknown_size)) });
 }
