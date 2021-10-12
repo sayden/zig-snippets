@@ -2,3 +2,4 @@ zig-cache
 *.o
 *.so
 *.out
+*.a

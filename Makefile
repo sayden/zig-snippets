@@ -10,3 +10,6 @@ ray:
 
 clean:
 	rm libmylib.so
+
+c-double_me:
+	zig build test --build-file c-double_me.build.zig

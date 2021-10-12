@@ -84,6 +84,14 @@ make ray
 ```
 * [c-ray](c-ray.zig) Interop with the [Raylib](https://www.raylib.com) library (https://github.com/raysan5/raylib)
 
+### Calling Zig from C
+At the moment of writing this README, the documentation is outdated and the header file is not generated as stated [in the docs](https://ziglang.org/documentation/master/#Exporting-a-C-Library). The workaround is to write the headers manually. Look at files `c-double_me*` for examples:
+```sh
+## Passing 8 in the c-double_me.c file
+make c-double_me
+16
+```
+
 ## Misc
 * [example.txt](example.txt) To use in the [file_read](file_read.zig) snippet
 * [slow_server.go](slow_server.go) A TCP ping-pong server in Go that takes 2 seconds to respond (to play in [async](async.zig) and test the [Network](#network) snippets)
